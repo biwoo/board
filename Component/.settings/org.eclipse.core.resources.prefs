@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//src/main/java/service/board/biz/BoardService.java=UTF-8
+encoding//src/main/java/service/board/biz/exam/tran/BoardServicePlateform.java=UTF-8
+encoding//src/main/java/service/board/biz/exam/tran/BoardServiceProxy.java=UTF-8
+encoding//src/main/java/service/board/biz/exam/tran/BoardServiceProxyTx.java=UTF-8
+encoding//src/main/java/service/board/domain/Board.java=UTF-8
+encoding//src/main/java/service/common/db/exam/impl/ConnectionMakerImpl.java=UTF-8
+encoding/<project>=UTF-8

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<project basedir="." default="build" name="ComponentBuild">
+
+	<property name="target" location="target" />
+	<property name="src" location="../Component/src/main/java" />
+	<property name="conf" location="../Component/src/main/resoure" />
+	<property name="lib" location="../Component/lib" />
+	<property name="dest" location="../Web/WebContent/WEB-INF/lib" />
+	
+	<path id="project.classpath">
+		<pathelement location="${lib}"/>
+		<fileset dir="${lib}">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+	
+	<target name="clean">  
+		<delete dir="${target}"/>
+	</target>
+	
+	<target name="compile">  
+		<mkdir dir="${target}" />  
+		<javac srcdir="${src}" destdir="${target}" includeantruntime="false"  source="1.8" target="1.8" debug="true" 
+			deprecation="false" optimize="false" failonerror="true" classpathref="project.classpath">  
+		</javac> 
+		<copy todir="${target}">
+			<fileset dir="${conf}"/>
+		</copy>
+	</target>
+    
+	<target name="jar">
+		<jar destfile="${dest}/spStdy.jar" basedir="${target}" />
+		<copy todir="${dest}">
+			<fileset dir="${lib}"/>
+		</copy>
+	</target>	
+	
+	<target depends="clean,compile,jar" name="build"/>
+ 
+</project>
