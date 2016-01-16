@@ -13,4 +13,10 @@
                         http://www.springframework.org/schema/context
                         http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
+<context:annotation-config/>
+
+<bean name="/viewboard" class="web.board.ViewBoardController" />
+
+<bean name="/insertboard" class="web.board.InsertBoardController" />
+
 </beans>

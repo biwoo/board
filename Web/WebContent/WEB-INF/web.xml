@@ -11,6 +11,8 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>
   		classpath:/config/application-context.xml
+  		classpath:/config/application-exam-context.xml
+  		classpath:/config/application-hello-context.xml
   	</param-value>
   </context-param>
   
@@ -26,7 +28,7 @@
   
   <servlet-mapping>
     <servlet-name>frontServlet</servlet-name>
-    <url-pattern>*.do</url-pattern>
+    <url-pattern>/board/*</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
