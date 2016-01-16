@@ -26,29 +26,29 @@ public class BoardTest {
 		
 		boardJdbcDao.deleteAllBoard();
 		
-		System.out.println(boardJdbcDao.insertBoard(board)==1 ? "µî·Ï¼º°ø" : "µî·Ï½ÇÆĞ");
+		System.out.println(boardJdbcDao.insertBoard(board)==1 ? "ë“±ë¡ì„±ê³µ" : "ë“±ë¡ì‹¤íŒ¨");
 		
 		List<Board> list = boardJdbcDao.selectBoard(new Board());
 		
-		System.out.println("Á¶È¸ °Ç¼ö : "+boardJdbcDao.getCount());
+		System.out.println("ì¡°íšŒ ê±´ìˆ˜ : "+boardJdbcDao.getCount());
 		
 		Board board1 = boardJdbcDao.selectBoard(list.get(0).getSeqNum());
 		
-		System.out.println("Á¶È¸ ÀÏ·Ã¹øÈ£ : "+board1.getSeqNum());
+		System.out.println("ì¡°íšŒ ì¼ë ¨ë²ˆí˜¸ : "+board1.getSeqNum());
 		
-		//¾÷µ¥ÀÌÆ® Å×½ºÆ®
+		//ì—…ë°ì´íŠ¸ í…ŒìŠ¤íŠ¸
 		board.setBoardTitle("update Title");
 		board.setSeqNum(board1.getSeqNum());
 		boardJdbcDao.updateBoard(board);
 		Board board2 = boardJdbcDao.selectBoard(board1.getSeqNum());
 		
-		System.out.println(board.getBoardTitle().equals(board2.getBoardTitle()) ? "¼öÁ¤¼º°ø" : "¼öÁ¤½ÇÆĞ");
+		System.out.println(board.getBoardTitle().equals(board2.getBoardTitle()) ? "ìˆ˜ì •ì„±ê³µ" : "ìˆ˜ì •ì‹¤íŒ¨");
 		
-		//»èÁ¦ Å×½ºÆ®
+		//ì‚­ì œ í…ŒìŠ¤íŠ¸
 		boardJdbcDao.deleteBoard(board1.getSeqNum());
 		Board board3 = boardJdbcDao.selectBoard(board1.getSeqNum());
 		
-		System.out.println(board3 == null ? "»èÁ¦¼º°ø" : "½ÄÁ¦½ÇÆĞ");
+		System.out.println(board3 == null ? "ì‚­ì œì„±ê³µ" : "ì‹ì œì‹¤íŒ¨");
 		
 	}
 }

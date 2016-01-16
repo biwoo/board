@@ -76,7 +76,7 @@ public class BoardUnitTest {
 		
 		List<Board> list = boardService.selectBoard(new Board());
 
-		//»èÁ¦ Å×½ºÆ®
+		//ì‚­ì œ í…ŒìŠ¤íŠ¸
 		boardService.deleteBoard(list.get(0).getSeqNum());
 				
 		assertThat(boardService.getCount(), is(0));

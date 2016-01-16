@@ -3,7 +3,7 @@
 <project basedir="." default="build" name="ComponentBuild">
 
 	<property name="target" location="target" />
-	<property name="src" location="../Component/src/main/java" />
+	<property name="src" location="../Component/src" />
 	<property name="conf" location="../Component/src/main/resoure" />
 	<property name="lib" location="../Component/lib" />
 	<property name="dest" location="../Web/WebContent/WEB-INF/lib" />
